@@ -32,7 +32,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 25px;
       padding: 0 10px 30px;
     }
     .barrio-card {
@@ -42,7 +42,7 @@
     }
     .barrio-card img {
       width: 100%;
-      height: 100px;
+      height: 150px;
       object-fit: cover;
       border-radius: 8px;
       transition: transform 0.2s;
@@ -61,7 +61,7 @@
 </head>
 <body>
   <h1>GEOMT</h1>
-  <input type="text" id="buscador" placeholder="Escribe la letra de un barrio..." />
+  <input type="text" id="buscador" placeholder="Escribe un barrio..." />
   <div id="galeria"></div>
 
   <script>
@@ -69,25 +69,24 @@
     const barrios = [
 { nombre: "Aguada", imagen: "imagenes/aguada.jpg" },
 { nombre: "Aires Puros", imagen: "imagenes/aires puros.jpg" },
-{ nombre: "Atahualpa", imagen: "imagenes/atahualpa.png" },
+{ nombre: "Atahualpa", imagen: "imagenes/atahualpa.jpg" },
 { nombre: "Bañados de Carrasco", imagen: "imagenes/bañados de carrasco.jpg" },
 { nombre: "Barrio Sur", imagen: "imagenes/barrio sur.jpg" },
 { nombre: "Belvedere", imagen: "imagenes/belvedere.jpg" },
-{ nombre: "Bolívar (Mercado Modelo)", imagen: "imagenes/mercado modelo.jpg" },
+{ nombre: "Bolívar (Mercado Modelo)", imagen: "imagenes/bolívar.jpeg" },
 { nombre: "Brazo Oriental", imagen: "imagenes/brazo oriental.jpg" },
-{ nombre: "Buceo", imagen: "imagenes/buceo.jpg" },
+{ nombre: "Buceo", imagen: "imagenes/Buceo.jpg" },
 { nombre: "Capurro, Bella Vista", imagen: "imagenes/capurro.jpg" },
 { nombre: "Carrasco", imagen: "imagenes/carrasco.jpg" },
 { nombre: "Carrasco Norte", imagen: "imagenes/carrasco norte.png" },
-{ nombre: "Casabó, Pajas Blancas", imagen: "imagenes/casabo.jpg" },
+{ nombre: "Casabó, Pajas Blancas", imagen: "imagenes/pajas blancas casabo.jpg" },
 { nombre: "Casavalle", imagen: "imagenes/casavalle.jpg" },
 { nombre: "Castro, Pérez Castellanos", imagen: "imagenes/castro.jpg" },
 { nombre: "Centro", imagen: "imagenes/centro.jpg" },
-{ nombre: "Cerrito", imagen: "imagenes/cerrito.jpg" },
-{ nombre: "Cerro", imagen: "imagenes/cerro.jpg" },
+{ nombre: "Cerrito de la Victoria", imagen: "imagenes/cerrito.jpg" },
 { nombre: "Ciudad Vieja", imagen: "imagenes/ciudad vieja.jpg" },
 { nombre: "Colón Centro y Noroeste", imagen: "imagenes/colon centro.jpg" },
-{ nombre: "Colón Sureste, Abayubá", imagen: "imagenes/colon sureste.jpg" },
+{ nombre: "Colón Sureste, Abayubá", imagen: "imagenes/abayuba.png" },
 { nombre: "Conciliación", imagen: "imagenes/conciliacion.jpg" },
 { nombre: "Cordón", imagen: "imagenes/cordon.jpg" },
 { nombre: "Flor de Maroñas", imagen: "imagenes/flor de maroñas.jpg" },
@@ -99,37 +98,37 @@
 { nombre: "La Figurita", imagen: "imagenes/la figurita.jpg" },
 { nombre: "La Paloma, Tomkinson", imagen: "imagenes/la paloma.jpg" },
 { nombre: "La Teja", imagen: "imagenes/la teja.jpg" },
-{ nombre: "Larrañaga", imagen: "imagenes/larrañaga.png" },
-{ nombre: "Las Acacias", imagen: "imagenes/las acacias.jpg" },
-{ nombre: "Las Canteras", imagen: "imagenes/las canteras.jpg" },
+{ nombre: "Larrañaga", imagen: "imagenes/Larrañaga.jpg" },
+{ nombre: "Las Acacias", imagen: "imagenes/las acacias.jpeg" },
+{ nombre: "Las Canteras,La Cruz de Carrasco", imagen: "imagenes/las canteras.jpg" },
 { nombre: "Lezica, Melilla", imagen: "imagenes/lezica.jpg" },
-{ nombre: "Malvín", imagen: "imagenes/malvin.jpg" },
-{ nombre: "Malvín Norte", imagen: "imagenes/malvin norte.jpg" },
+{ nombre: "Malvín", imagen: "imagenes/Malvin.png" },
+{ nombre: "Malvín Norte", imagen: "imagenes/malvin norte por ahora.jpg" },
 { nombre: "Manga", imagen: "imagenes/manga.jpg" },
-{ nombre: "Manga, Toledo Chico", imagen: "imagenes/manga toledo chico.jpg" },
 { nombre: "Maroñas, Parque Guaraní", imagen: "imagenes/maroñas.jpg" },
 { nombre: "Nuevo París", imagen: "imagenes/nuevo paris.jpg" },
 { nombre: "Palermo", imagen: "imagenes/palermo.jpg" },
 { nombre: "Parque Batlle, Villa Dolores", imagen: "imagenes/parque batlle.jpg" },
 { nombre: "Parque Rodó", imagen: "imagenes/parque rodo.jpg" },
-{ nombre: "Paso de la Arena", imagen: "imagenes/paso de la arena.jpeg" },
+{ nombre: "Paso de la Arena", imagen: "imagenes/paso la arena (la baguala).jpeg" },
 { nombre: "Paso de las Duranas", imagen: "imagenes/paso de las duranas.jpg" },
 { nombre: "Peñarol, Lavalleja", imagen: "imagenes/peñarol.jpg" },
-{ nombre: "Piedras Blancas", imagen: "imagenes/piedras blancas.jpg" },
-{ nombre: "Pocitos", imagen: "imagenes/pocitos.jpeg" },
+{ nombre: "Piedras Blancas", imagen: "imagenes/piedras blancas 1.jpg" },
+{ nombre: "Pocitos", imagen: "imagenes/pocitos.jpg" },
 { nombre: "Prado, Nueva Savona", imagen: "imagenes/prado.jpg" },
-{ nombre: "Punta Carretas", imagen: "imagenes/punta carretas.jpg" },
+{ nombre: "Punta Carretas", imagen: "imagenes/punta carretas.jpeg" },
 { nombre: "Punta Gorda", imagen: "imagenes/punta gorda.jpg" },
-{ nombre: "Punta Rieles, Bella Italia", imagen: "imagenes/punta de rieles.jpg" },
+{ nombre: "Punta Rieles, Bella Italia", imagen: "imagenes/bella italia.jpg" },
 { nombre: "Reducto", imagen: "imagenes/reducto.jpg" },
 { nombre: "Sayago", imagen: "imagenes/sayago.jpg" },
+{ nombre: "Toledo Chico, Manga", imagen: "imagenes/Toledo chico.png" },
 { nombre: "Tres Cruces", imagen: "imagenes/tres cruces.jpg" },
 { nombre: "Tres Ombúes, Pueblo Victoria", imagen: "imagenes/tres ombues.jpg" },
 { nombre: "Unión", imagen: "imagenes/union.jpg" },
-{ nombre: "Villa del Cerro", imagen: "imagenes/villa del cerro.png" },
+{ nombre: "Villa del Cerro", imagen: "imagenes/villa del cerro.jpg" },
 { nombre: "Villa Española", imagen: "imagenes/villa española.jpg" },
 { nombre: "Villa García, Manga Rural", imagen: "imagenes/villa garcia.jpg" },
-{ nombre: "Villa Muñoz, Retiro", imagen: "imagenes/villa muñoz.png" }
+{ nombre: "Villa Muñoz, Retiro", imagen: "imagenes/villa muñoz.jpg" }
 
     ];
 
