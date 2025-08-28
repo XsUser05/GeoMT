@@ -7,3 +7,37 @@ footer {
   color: #555;
   background-color: black;
 }
+/*poner en body."y el nombre del barrio"se cambia el style */ 
+body.barrio{
+.categorias {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.categoria{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-decoration:none;
+    color: #333;
+    transition:transform 0.2s;
+  }
+
+.categoria:hover{
+  transform:scale(1.05);
+}
+
+.categoria img{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+}
+
+
