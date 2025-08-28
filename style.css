@@ -40,4 +40,10 @@ body.barrio{
 }
 }
 
+body {
+  background-image: url("imagenes/fondo de geomt/bora.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
